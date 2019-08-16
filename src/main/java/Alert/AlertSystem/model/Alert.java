@@ -9,6 +9,7 @@ import org.springframework.boot.jackson.JsonComponent;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.util.HashSet;
 
 @Entity
 @Getter
@@ -24,4 +25,12 @@ public class Alert {
     private String name;
     private String method;
     private Long periyod;
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
 }
