@@ -20,17 +20,11 @@ import java.util.HashSet;
 public class Alert {
     @Id
     @GeneratedValue
+    private Long id;
 
     private String url;
     private String name;
     private String method;
     private Long periyod;
 
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
 }
