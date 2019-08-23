@@ -38,7 +38,7 @@ public class Request {
             Result resultSuc = new Result(null,1,nowDate,connection.getResponseMessage());
         }
         catch(Exception e){
-            Result result = new Result(null,0,nowDate,e.getMessage());
+            Result resultErr = new Result(null,0,nowDate,e.getMessage());
         }
            
                     
