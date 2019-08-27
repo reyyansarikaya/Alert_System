@@ -24,7 +24,9 @@ public class Result {
 
     private Integer downorup;
     private Date resultDate;
+
     private String response;
+
 
 
 
