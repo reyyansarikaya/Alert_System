@@ -1,0 +1,18 @@
+.Alert{
+  position: fixed;
+  top: 3cm;
+  left: 10cm;
+  border: 5px solid #4CB050;
+  border-radius: 75px 175px / 175px 75px;
+  width: 500px;
+  height: 200px;
+  font-size: 25px;
+  background-color: #333333;
+  color: #f2f2f2;
+  font-style: italic;
+}
+.input{
+  border: 5px solid #4CB050;
+  border-radius: 12px;
+
+}

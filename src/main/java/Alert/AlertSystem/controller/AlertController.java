@@ -18,20 +18,24 @@ public class AlertController {
     }
 
     @GetMapping("/alert")
-    public List<Alert> getAlert() {
+    public List<Alert> getAlerts() {
         return alertService.getAlert();
     }
 
+    @GetMapping("/alert/{alertName}")
+    public Alert getAlert(@PathVariable String alertName) {
+        return alertService.getAlertByName(alertName);
+    }
 
     @PostMapping("/alert")
     public Alert addAlert(@RequestBody final Alert alert) {
         return alertService.addAlert(alert);
     }
 
-    @PutMapping("/alert")
+    /*@PutMapping("/alert")
     public Alert updateAlert(@RequestBody final Alert alert, @RequestParam Long id) {
         return alertService.updateAlert(alert, id);
-    }
+    }*/
 
     @DeleteMapping("/alert")
     public void deleteAlert(@RequestParam final Long id) {

@@ -25,7 +25,7 @@ public class Request {
 
     @Async
     public void sendRequest(Alert alert)  {
-        SimpleDateFormat sfDate = new SimpleDateFormat("yyyy.MM.dd G 'at' HH:mm:ss z");
+        SimpleDateFormat sfDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date nowDate = new Date();
         String Date = sfDate.format(nowDate);
         try {
