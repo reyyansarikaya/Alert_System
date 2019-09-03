@@ -16,20 +16,18 @@ public class AlertService {
     public AlertService(AlertRepository alertRepository) {
         this.alertRepository = alertRepository;
     }
-
     public List<Alert> getAlert() {
         return alertRepository.findAll();
     }
-
-
     public Alert addAlert(final Alert alert){
         return alertRepository.save(alert);
     }
-
     public void deleteAlert(Long id){
         alertRepository.deleteByName(id);
     }
-
+    public Alert getAlertByName(String alertName){
+        return alertRepository.findByName(alertName);
+    }
     /*public Alert updateAlert(Alert alert,Long id){
         Alert alertFromDB= alertRepository.findByName(id);
         if(alertFromDB!=null){
@@ -39,9 +37,7 @@ public class AlertService {
         }
         return null;
     }*/
-    public Alert getAlertByName(String alertName){
-        return alertRepository.findByName(alertName);
-    }
+
 
 
 }

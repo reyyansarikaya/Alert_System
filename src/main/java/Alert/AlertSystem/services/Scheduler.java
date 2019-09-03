@@ -21,12 +21,9 @@ public class Scheduler {
         for(Alert alert:alerts){
 
             if(alert.getRemaning_time()==0L){
-
                 request.sendRequest(alert);
             }
-
             else{
-
                 alert.setRemaning_time(alert.getRemaning_time() -1L);
                 alertRepository.save(alert);
             }

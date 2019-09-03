@@ -86,7 +86,7 @@ class AlertForm extends Component {
         </tr>
          <tr>
          <td>&nbsp;</td>
-          <td><button type="kaydet">Kaydet</button></td>
+          <td><button type="save"  border="1" bgcolor="#333333" >Save</button></td>
            </tr>
            </tbody>
             </table>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts'
 import axios from 'axios'
-
+import './Graph.css';
 
 class Graph extends React.Component{
 
@@ -20,8 +20,8 @@ class Graph extends React.Component{
                     let temp = []
                     results.forEach((result) => {
                         let date = result.resultDate
-                        let situation = result.downorup
-                        let now = {name: date, pv: situation, amt: 2000}
+                        let situation = result.downOrUp
+                        let now = {name: date, pv: situation, amt: 20000}
                         temp.push(now)
                     })
                     this.setState({data2: temp, periyod : response.data.periyod})
@@ -31,29 +31,30 @@ class Graph extends React.Component{
                 .catch((error) => {
                     console.log(error.message)
                 })
-        },this.state.periyod *5000);
+        },5000);
     }
 
     render() {
         return (
             <div className="Graph">
-            <center>
-                <LineChart
-                    width={500}
-                    height={300}
-                    data={this.state.data2}
-                    margin={{
-                        top: 5, right: 30, left: 20, bottom: 5,
-                    }}
-                >
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="name" />
-                    <YAxis />
-                    <Tooltip />
-                    <Legend />
-                    <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-                </LineChart>
-        </center>  </div>
+                <center>
+                    <LineChart
+                        width={500}
+                        height={300}
+                        data={this.state.data2}
+                        margin={{
+                            top: 5, right: 30, left: 20, bottom: 5,
+                        }}
+                    >
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="name" />
+                        <YAxis />
+                        <Tooltip />
+                        <Legend />
+                        <Line type="monotone" dataKey="pv" stroke="#14aa1a" activeDot={{ r: 8 }} />
+                    </LineChart>
+                 </center>
+        </div>
         );
     }
 
